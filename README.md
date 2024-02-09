@@ -1,5 +1,3 @@
-Certainly! Below is a formatted README for your NLW Expert Node.js project. You can copy and paste this into your README.md file on GitHub:
-
 ```markdown
 # NLW Expert (Node.js) - Real-time Voting System
 
@@ -97,8 +95,3 @@ Connect to `/polls/:pollId/results` for real-time vote updates.
     "votes": 2
   }
   ```
-
-This README provides a starting point for understanding the NLW Expert Node.js project. Feel free to explore the code, contribute improvements, and build upon this foundation!
-```
-
-Make sure to replace placeholders like "Your poll title," "Option 1," etc., with the actual information from your application.
