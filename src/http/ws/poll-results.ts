@@ -10,8 +10,14 @@ export async function pollResults(app: FastifyInstance) {
 
     const { pollId } = getPollParams.parse(request.params)
 
-    voting.subscribe(pollId, (message) => {
+    const listener = (message: { pollOptionId: string, votes: number }) => {
       connection.socket.send(JSON.stringify(message))
+    }
+
+    voting.subscribe(pollId, listener)
+
+    connection.socket.on('close', () => {
+      voting.unsubscribe(pollId, listener)
     })
   })
 }
